@@ -17,9 +17,8 @@
             <a href="#about">About</a>
             <a href="#initiatives">Community Initiatives</a>
             <a href="#events">Events</a>
-            <a href="#news">News</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#support">Support Us</a>
+            <a href="#join-movement">Join the Movement</a>
+            <a href="#volunteer">Volunteer</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -50,35 +49,82 @@
     <section id="events">
         <h2>Upcoming Events</h2>
         <p>Stay updated with the latest events and opportunities to get involved.</p>
-        <ul id="event-list">
-            <!-- Dynamic Events will be inserted here by JavaScript -->
-        </ul>
-    </section>
+        <ul id="event-list"></ul>
 
-    <!-- News Section -->
-    <section id="news">
-        <h2>Latest News</h2>
-        <div id="news-feed">
-            <!-- News articles will be dynamically loaded here -->
+        <!-- Countdown Timer for Major Event -->
+        <div id="countdown-timer">
+            <h3>Countdown to Next Major Event</h3>
+            <p id="timer"></p>
+        </div>
+
+        <!-- FKM Soccer Tournament Sub-Section -->
+        <div id="soccer-tournament">
+            <h3>FKM Soccer Tournament 2024</h3>
+            <div class="tabs">
+                <button onclick="showTab('pools')">Pools</button>
+                <button onclick="showTab('fixtures')">Fixtures</button>
+                <button onclick="showTab('results')">Results</button>
+                <button onclick="showTab('standings')">Standings</button>
+                <button onclick="showTab('player-records')">Player Records</button>
+            </div>
+            <div id="tournament-content">
+                <div id="pools" class="tab-content">
+                    <h4>Pools</h4>
+                    <p>Content for Pools will be displayed here.</p>
+                </div>
+                <div id="fixtures" class="tab-content" style="display: none;">
+                    <h4>Fixtures</h4>
+                    <p>Content for Fixtures will be displayed here.</p>
+                </div>
+                <div id="results" class="tab-content" style="display: none;">
+                    <h4>Results</h4>
+                    <p>Content for Results will be displayed here.</p>
+                </div>
+                <div id="standings" class="tab-content" style="display: none;">
+                    <h4>Standings</h4>
+                    <p>Content for Standings will be displayed here.</p>
+                </div>
+                <div id="player-records" class="tab-content" style="display: none;">
+                    <h4>Player Records</h4>
+                    <p>Content for Player Records will be displayed here.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div id="gallery-photos">
-            <!-- Images of events and initiatives -->
-            <img src="images/photo1.jpg" alt="Event 1">
-            <img src="images/photo2.jpg" alt="Event 2">
-            <img src="images/photo3.jpg" alt="Initiative 1">
-        </div>
+    <!-- Join the Movement Section -->
+    <section id="join-movement">
+        <h2>Join the Movement</h2>
+        <p>Be a part of the journey to make Mbooni stronger and more united. Join us in creating meaningful change in our community.</p>
+        <form id="movement-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Join the Movement</button>
+        </form>
+        <p id="movement-status"></p>
     </section>
 
-    <!-- Support Us Section -->
-    <section id="support">
-        <h2>Support Us</h2>
-        <p>Help us empower Mbooni with meaningful change. Your support makes a difference.</p>
-        <button onclick="donate()">Donate</button>
+    <!-- Volunteer Section -->
+    <section id="volunteer">
+        <h2>Volunteer with Us</h2>
+        <p>Join our team as a volunteer! We have roles for community outreach, event organization, and canvassing.</p>
+        <button onclick="displayVolunteerForm()">Sign Up as a Volunteer</button>
+        <div id="volunteer-form" style="display: none;">
+            <form id="volunteer-signup">
+                <label for="volunteer-name">Name:</label>
+                <input type="text" id="volunteer-name" name="volunteer-name" required>
+                <label for="volunteer-role">Select a Role:</label>
+                <select id="volunteer-role" name="volunteer-role">
+                    <option value="Community Outreach">Community Outreach</option>
+                    <option value="Event Organization">Event Organization</option>
+                    <option value="Canvassing">Canvassing</option>
+                </select>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p id="volunteer-status"></p>
+        </div>
     </section>
 
     <!-- Contact Section -->
@@ -88,13 +134,10 @@
         <form id="contact-form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
-            
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
-            
             <button type="submit">Send Message</button>
         </form>
         <p id="form-status"></p>
@@ -102,7 +145,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2023 Festus Kasyoka Mbuva. All rights reserved.</p>
+        <p>&copy; 2024 Festus Kasyoka Mbuva. All rights reserved.</p>
     </footer>
 
     <script src="scripts.js"></script> <!-- Link to JavaScript file -->
