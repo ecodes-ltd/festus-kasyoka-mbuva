@@ -11,32 +11,32 @@
     <!-- Header and Navigation -->
     <header>
         <h1>Festus Kasyoka Mbuva</h1>
-        <p>The Rising Sun</p>
+        <p>Empowering Mbooni for a brighter tomorrow</p>
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#initiatives">Community Initiatives</a>
             <a href="#events">Events</a>
-            <a href="#join-movement">Join the Movement</a>
+            <a href="#register-now">Register Now</a>
             <a href="#volunteer">Volunteer</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <!-- Home Section -->
-    <section id="home">
+    <section id="home" class="content-section">
         <h2>Welcome to Festus Kasyoka Mbuva's Official Website</h2>
         <p>Join our journey in empowering Mbooni with impactful initiatives, education sponsorships, and community development projects.</p>
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="content-section">
         <h2>About Festus Kasyoka Mbuva</h2>
         <p>Festus Kasyoka Mbuva is an aspiring MP for Mbooni sub-county, dedicated to fostering growth through education, sports, and community projects. With a vision for a stronger, more united Mbooni, Festus seeks to make a lasting difference.</p>
     </section>
 
     <!-- Community Initiatives Section -->
-    <section id="initiatives">
+    <section id="initiatives" class="content-section">
         <h2>Community Initiatives</h2>
         <ul>
             <li><strong>Education Sponsorships:</strong> Supporting needy students to achieve their educational dreams.</li>
@@ -46,7 +46,7 @@
     </section>
 
     <!-- Events Section -->
-    <section id="events">
+    <section id="events" class="content-section">
         <h2>Upcoming Events</h2>
         <p>Stay updated with the latest events and opportunities to get involved.</p>
         <ul id="event-list"></ul>
@@ -92,22 +92,27 @@
         </div>
     </section>
 
-    <!-- Join the Movement Section -->
-    <section id="join-movement">
-        <h2>Join the Movement</h2>
-        <p>Be a part of the journey to make Mbooni stronger and more united. Join us in creating meaningful change in our community.</p>
-        <form id="movement-form">
+    <!-- Register Now Section -->
+    <section id="register-now" class="content-section">
+        <h2>Register Now to Become Team FKM</h2>
+        <p>Be a part of the journey to make Mbooni stronger and more united. Join Team FKM and help us create meaningful change in our community.</p>
+        <form id="register-form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Join the Movement</button>
+
+            <label for="id-number">ID Number:</label>
+            <input type="text" id="id-number" name="id-number" required>
+
+            <label for="tel">Tel No (e.g., +254):</label>
+            <input type="tel" id="tel" name="tel" placeholder="+254" required>
+
+            <button type="submit">Register Now</button>
         </form>
-        <p id="movement-status"></p>
+        <p id="register-status"></p>
     </section>
 
     <!-- Volunteer Section -->
-    <section id="volunteer">
+    <section id="volunteer" class="content-section">
         <h2>Volunteer with Us</h2>
         <p>Join our team as a volunteer! We have roles for community outreach, event organization, and canvassing.</p>
         <button onclick="displayVolunteerForm()">Sign Up as a Volunteer</button>
@@ -128,7 +133,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="content-section">
         <h2>Contact</h2>
         <p>Reach out to us for more information or to get involved with our initiatives.</p>
         <form id="contact-form">
