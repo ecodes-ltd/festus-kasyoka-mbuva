@@ -1,30 +1,66 @@
-// Simulate fetching event data
-const events = [
-    { name: "Annual Sports Tournament", date: "2023-12-15" },
-    { name: "Education Sponsorship Deadline", date: "2024-01-10" },
-    { name: "Community Clean-Up Day", date: "2024-02-05" }
-];
+function startCountdown(targetDate) {
+    const countdownElement = document.getElementById('timer');
+    const target = new Date(targetDate).getTime();
 
-function loadEvents() {
-    const eventList = document.getElementById('event-list');
-    events.forEach(event => {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${event.name} - Date: ${event.date}`;
-        eventList.appendChild(listItem);
-    });
+    const interval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = target - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+        if (distance < 0) {
+            clearInterval(interval);
+            countdownElement.innerHTML = "Event Started!";
+        }
+    }, 1000);
 }
 
-// Handle Contact Form Submission
-document.getElementById("contact-form").addEventListener("submit", function(event) {
+startCountdown("2024-11-10T00:00:00"); // Example start date for countdown
+
+// Show the selected tab content and hide others
+function showTab(tabId) {
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(content => {
+        content.style.display = 'none'; // Hide all tab content by default
+    });
+
+    // Display the selected tab content
+    document.getElementById(tabId).style.display = 'block';
+}
+
+// Display the volunteer form on button click
+function displayVolunteerForm() {
+    const form = document.getElementById('volunteer-form');
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+}
+
+// Handle Join the Movement Form Submission
+document.getElementById("movement-form").addEventListener("submit", function(event) {
     event.preventDefault();
-    document.getElementById("form-status").textContent = "Message sent successfully!";
+    document.getElementById("movement-status").textContent = "Thank you for joining the movement! We’ll keep you updated.";
     this.reset();
 });
 
-// Donation Simulation
-function donate() {
-    alert("Thank you for your support! Your donation will help empower Mbooni.");
-}
+// Contact Form Submission
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById("form-status").textContent = "Your message has been sent successfully!";
+    this.reset();
+});
 
-// Load Events on Page Load
-window.onload = loadEvents;
+// Volunteer Form Submission
+document.getElementById("volunteer-signup").addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById("volunteer-status").textContent = "Thank you for signing up as a volunteer!";
+    this.reset();
+});
+
+// Load Events when the page loads
+window.onload = function() {
+    showTab('pools'); // Show Pools tab by default
+};
