@@ -1,127 +1,64 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+/* Countdown Timer Styling */
+#countdown-timer {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
 }
 
-/* Color Palette for Rising Sun Theme */
-:root {
-    --primary-color: #FF4500; /* Reddish-orange */
-    --secondary-color: #FFA500; /* Warm yellow-orange */
-    --accent-color: #FFD700; /* Golden yellow */
-    --background-color: #FFF5E1; /* Soft sunrise beige */
-    --text-color: #333333; /* Dark grey for contrast */
+/* Tabs and tab content for tournament */
+.tabs button {
+    padding: 0.5rem;
+    margin-right: 5px;
+    border: none;
+    color: #fff;
+    background-color: var(--primary-color);
+    cursor: pointer;
 }
 
-/* Header */
-header {
+.tabs button:hover {
+    background-color: #E04000;
+}
+
+.tab-content {
+    display: none;
+    padding: 1rem;
+    background-color: #FFF7E6;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content h4 {
+    color: var(--primary-color);
+}
+
+/* Styling for buttons and interactive sections */
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
     background-color: var(--primary-color);
     color: white;
-    text-align: center;
-    padding: 1.5rem 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-header h1 {
-    font-size: 2.5rem;
+button:hover {
+    background-color: #E04000;
 }
 
-header p {
-    font-size: 1.2rem;
-    color: var(--accent-color);
-}
-
-nav {
-    margin-top: 1rem;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Sections */
+/* General section styling */
 section {
     padding: 2rem;
     max-width: 800px;
     margin: auto;
-    background-color: var(--background-color);
+    background-color: #FFF5E1;
     border-radius: 10px;
     margin-bottom: 1.5rem;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-p {
-    color: var(--text-color);
-}
-
-/* Initiatives and Events List */
-#initiatives ul, #events ul {
-    list-style-type: square;
-    padding-left: 20px;
-    color: var(--secondary-color);
-}
-
-/* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: auto;
-}
-
-label, input, textarea, button {
-    margin-bottom: 0.5rem;
-    color: var(--text-color);
-}
-
-input, textarea {
-    padding: 0.5rem;
-    border: 1px solid var(--secondary-color);
-    border-radius: 4px;
-    background-color: #FFF7E6; /* Light background */
-}
-
-button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.7rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #E04000; /* Slightly darker shade for hover effect */
-}
-
-/* Gallery */
-#gallery-photos {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-#gallery-photos img {
-    width: 150px;
-    border-radius: 8px;
-    border: 2px solid var(--accent-color);
-}
-
-/* Footer */
+/* Footer styling */
 footer {
     background-color: var(--secondary-color);
     color: white;
@@ -129,3 +66,4 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
 }
+
