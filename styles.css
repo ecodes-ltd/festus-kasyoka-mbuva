@@ -1,3 +1,50 @@
+/* Define Primary and Secondary Colors */
+:root {
+    --primary-color: #FF9800; /* Main Orange */
+    --secondary-color: #E65100; /* Darker Orange */
+    --background-color: #FFF3E0; /* Light Background Orange */
+    --text-color: #3E2723; /* Dark Brown for readability */
+}
+
+/* General Section Styling */
+.content-section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 1.5rem auto;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--background-color);
+}
+
 /* Countdown Timer Styling */
 #countdown-timer {
     text-align: center;
@@ -6,59 +53,50 @@
     color: var(--primary-color);
 }
 
-/* Tabs and tab content for tournament */
+/* Tabs and Tab Content Styling */
 .tabs button {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     margin-right: 5px;
     border: none;
-    color: #fff;
-    background-color: var(--primary-color);
+    color: white;
+    background-color: var(--secondary-color);
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .tabs button:hover {
-    background-color: #E04000;
+    background-color: #BF360C;
 }
 
 .tab-content {
     display: none;
     padding: 1rem;
-    background-color: #FFF7E6;
+    background-color: #FFE0B2;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .tab-content h4 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
-/* Styling for buttons and interactive sections */
+/* Buttons and Interactive Elements */
 button {
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     font-size: 1rem;
     background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #E04000;
+    background-color: var(--secondary-color);
 }
 
-/* General section styling */
-section {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-    background-color: #FFF5E1;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer styling */
+/* Footer Styling */
 footer {
     background-color: var(--secondary-color);
     color: white;
@@ -67,3 +105,24 @@ footer {
     margin-top: 2rem;
 }
 
+/* Input and Form Styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: #FFF8E1;
+    color: var(--text-color);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
